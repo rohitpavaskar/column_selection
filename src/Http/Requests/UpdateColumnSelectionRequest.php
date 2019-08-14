@@ -22,7 +22,7 @@ class UpdateColumnSelectionRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'columns' => 'required'
+            'columns' => 'nullable'
         ];
     }  
     
