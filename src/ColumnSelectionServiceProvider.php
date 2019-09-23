@@ -1,10 +1,10 @@
 <?php
 
-namespace Rohitpavaskar\AdditionalField;
+namespace Rohitpavaskar\ColumnSelection;
 
 use Illuminate\Support\ServiceProvider;
 
-class AdditionalFieldServiceProvider extends ServiceProvider {
+class ColumnSelectionServiceProvider extends ServiceProvider {
 
     /**
      * Publishes configuration file.
@@ -13,8 +13,8 @@ class AdditionalFieldServiceProvider extends ServiceProvider {
      */
     public function boot() {
         $this->publishes([
-            __DIR__ . '/config/additional_fields.php' => config_path('additional_fields.php'),
-                ], 'additional_fields');
+            __DIR__ . '/config/column_selection.php' => config_path('column_selection.php'),
+                ], 'column_selection');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/' => database_path('migrations')
@@ -28,7 +28,7 @@ class AdditionalFieldServiceProvider extends ServiceProvider {
      */
     public function register() {
         $this->mergeConfigFrom(
-                __DIR__ . '/config/additional_fields.php', 'additional_fields'
+                __DIR__ . '/config/column_selection.php', 'column_selection'
         );
     }
 }
