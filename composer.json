@@ -1,6 +1,6 @@
 {
-    "name": "rohitpavaskar/column_selection",
-    "description": "Column selection in table",
+    "name": "rohitpavaskar/additional_fields",
+    "description": "Additional field management for users",
     "type": "library",
     "require": {
         "php": ">=7",
@@ -15,13 +15,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Rohitpavaskar\\ColumnSelection\\": "src/"
+            "Rohitpavaskar\\AdditionalField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Rohitpavaskar\\ColumnSelection\\ColumnSelectionServiceProvider"
+                "Rohitpavaskar\\AdditionalField\\AdditionalFieldServiceProvider"
             ]
         }
     },
