@@ -18,10 +18,7 @@ class ColumnSelectionController {
                 ->where('user_id', auth()->user()->id)
                 ->first();
         if ($column) {
-            $arr = explode(',', $column->columns);
-            return array_map(function($k) {
-                return (int) $k;
-            }, $arr);
+            return explode(',', $column->columns);
         } else {
             return array();
         }
