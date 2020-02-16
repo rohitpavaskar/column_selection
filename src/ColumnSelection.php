@@ -15,6 +15,7 @@ class ColumnSelection {
      */
     public static function routes() {
         Route::resource('/column-selections', '\Rohitpavaskar\ColumnSelection\Http\Controllers\ColumnSelectionController');
+        Route::resource('/default-columns', '\Rohitpavaskar\ColumnSelection\Http\Controllers\DefaultColumnsController');
     }
 
 }

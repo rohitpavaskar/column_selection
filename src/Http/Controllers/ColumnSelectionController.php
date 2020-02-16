@@ -2,6 +2,7 @@
 
 namespace Rohitpavaskar\ColumnSelection\Http\Controllers;
 
+use Rohitpavaskar\ColumnSelection\Models\DefaultColumns;
 use Rohitpavaskar\ColumnSelection\Models\ColumnSelection;
 use Rohitpavaskar\ColumnSelection\Http\Requests\UpdateColumnSelectionRequest;
 
@@ -20,7 +21,12 @@ class ColumnSelectionController {
         if ($column) {
             return explode(',', $column->columns);
         } else {
-            return array();
+            $column = DefaultColumns::where('table_name', $id)->first();
+            if ($column) {
+                return explode(',', $column->dafault_hidden_columns);
+            } else {
+                return array();
+            }
         }
     }
 

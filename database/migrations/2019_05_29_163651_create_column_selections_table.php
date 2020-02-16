@@ -16,7 +16,7 @@ class CreateColumnSelectionsTable extends Migration {
             Schema::create('column_selections', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('table_name');
-                $table->string('columns');
+                $table->text('columns');
 		$table->unsignedInteger('user_id');
                 $table->timestamps();
             });
