@@ -23,7 +23,7 @@ class ColumnSelectionController {
         } else {
             $column = DefaultColumns::where('table_name', $id)->first();
             if ($column) {
-                return explode(',', $column->dafault_hidden_columns);
+                return explode(',', $column->default_hidden_columns);
             } else {
                 return array();
             }
